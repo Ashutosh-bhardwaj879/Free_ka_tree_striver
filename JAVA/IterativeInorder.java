@@ -1,8 +1,20 @@
 import java.util.*;
 
-class inorder {
+class ItertiveInorder {
     public static void main(String[] args) {
+        Node root = new Node(1);
+        root.left = new Node(2);
+        root.right = new Node(3);
+        root.left.left = new Node(4);
+        root.left.right = new Node(5);
+        root.right.left = new Node(6);
+        root.right.right = new Node(7);
+        List<Integer> res = inOrderTraversal(root);
+        print(res);
+    }
 
+    public static void print(List<Integer> res) {
+        System.out.println(res);
     }
 
     public static List<Integer> inOrderTraversal(Node root) {
